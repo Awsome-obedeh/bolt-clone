@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="bolt.css">
+</head>
+
+<body>
+    <!-- <div class="container">
+        <p>show</p>
+        <div class="sidebar"></div>
+    </div> -->
+
+
+    <nav class="navbar container">
+        <div class="logo-holder">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTQiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCA1NCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC42OTYgMTEuMTE3M0MxNi43OTc2IDcuNjk0MiAxNS43NTA2IDMuMjA3MiAxMi4zNTc1IDEuMDg3MDZDMTEuMjE4OCAwLjM3Nzc3MiA5Ljg5NjY5IDAgOC41NTkzIDBIMFYyMy41OTE0SDkuNjI5MjFDMTMuNjE4NSAyMy41OTE0IDE2Ljg1MTEgMjAuMzMwMyAxNi44NTExIDE2LjMwNTlDMTYuODUxMSAxNC4zNTUzIDE2LjA3OTMgMTIuNDg5NiAxNC42OTYgMTEuMTE3M1pNNS41MDI0MSA1LjU1MDkzSDguNTU5M0M5LjUwNjkzIDUuNTUwOTMgMTAuMjc4OCA2LjMyOTYgMTAuMjc4OCA3LjI4NTU5QzEwLjI3ODggOC4yNDE1OSA5LjUwNjkzIDkuMDIwMjYgOC41NTkzIDkuMDIwMjZINS41MDI0MVY1LjU1MDkzWk05LjYyOTIxIDE4LjA0MDVINS41MDI0MVYxNC41NzEySDkuNjI5MjFDMTAuNTc2OCAxNC41NzEyIDExLjM0ODcgMTUuMzQ5OSAxMS4zNDg3IDE2LjMwNTlDMTEuMzQ4NyAxNy4yNjE4IDEwLjU3NjggMTguMDQwNSA5LjYyOTIxIDE4LjA0MDVaTTQzLjQ0NjEgMFYyMy41OTE0SDM3Ljk0MzdWMS4xNzk1N0w0My40NDYxIDBaTTI3LjM5NzQgNi42OTk2NUMyMi43MTI3IDYuNjk5NjUgMTguOTA2OSAxMC41MzEzIDE4LjkwNjkgMTUuMjY1QzE4LjkwNjkgMTkuOTkxIDIyLjcwNTEgMjMuODMwNCAyNy4zOTc0IDIzLjgzMDRDMzIuMDgyMSAyMy44MzA0IDM1Ljg4NzkgMTkuOTk4OCAzNS44ODc5IDE1LjI2NUMzNS44ODAzIDEwLjUzOSAzMi4wODIxIDYuNjk5NjUgMjcuMzk3NCA2LjY5OTY1Wk0yNy4zOTc0IDE4LjA0MDVDMjUuODc2NiAxOC4wNDA1IDI0LjY0NjIgMTYuNzk5MyAyNC42NDYyIDE1LjI2NUMyNC42NDYyIDEzLjczMDggMjUuODc2NiAxMi40ODk2IDI3LjM5NzQgMTIuNDg5NkMyOC45MTgyIDEyLjQ4OTYgMzAuMTQ4NiAxMy43MzA4IDMwLjE0ODYgMTUuMjY1QzMwLjE0ODYgMTYuNzk5MyAyOC45MTgyIDE4LjA0MDUgMjcuMzk3NCAxOC4wNDA1Wk0zMC4xNDg2IDI4LjYwMjdDMzAuMTQ4NiAzMC4xMzU1IDI4LjkxNjggMzEuMzc4MiAyNy4zOTc0IDMxLjM3ODJDMjUuODc4IDMxLjM3ODIgMjQuNjQ2MiAzMC4xMzU1IDI0LjY0NjIgMjguNjAyN0MyNC42NDYyIDI3LjA2OTggMjUuODc4IDI1LjgyNzIgMjcuMzk3NCAyNS44MjcyQzI4LjkxNjggMjUuODI3MiAzMC4xNDg2IDI3LjA2OTggMzAuMTQ4NiAyOC42MDI3Wk01My45OTIzIDcuMDE1NzZWMTIuNTU5SDUxLjI0ODhWMTYuOTIyNkM1MS4yNDg4IDE4LjI0MSA1MS42NjkxIDE5LjIxMjQgNTIuNzY5NiAxOS4yMTI0QzUzLjE4OTkgMTkuMjIwMSA1My42MDI2IDE5LjE2NjEgNTQgMTkuMDUwNVYyMy4xMzY2QzUzLjE3NDYgMjMuNTkxNCA1Mi4yNTc2IDIzLjgzMDQgNTEuMzE3NiAyMy44MzA0SDUxLjI0ODhDNTEuMjEzNCAyMy44MzA0IDUxLjE3OCAyMy44Mjg0IDUxLjE0MzYgMjMuODI2NEM1MS4xMTEyIDIzLjgyNDUgNTEuMDc5OCAyMy44MjI3IDUxLjA1MDEgMjMuODIyN0g1MC45OTY2TDUwLjg5NzIgMjMuODE1QzQ3LjgyNTEgMjMuNjUzMSA0NS43Mzg3IDIxLjcwMjYgNDUuNzM4NyAxOC4zMTgxVjE4LjMwMjZWMTguMjc5NVYxMi41NjY3VjMuOTU1MDRMNTEuMjQxMSAyLjc3NTQ2VjcuMDE1NzZINTMuOTkyM1oiIGZpbGw9IiMyRjMxM0YiLz4KPC9zdmc+Cg=="
+                alt="">
+        </div>
+
+        <div class="nav-links">
+            <div class="countries">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLW5nIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGcgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2Utd2lkdGg9IjFwdCI+CiAgICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDY0MHY0ODBIMHoiLz4KICAgIDxwYXRoIGZpbGw9IiMwMDg3NTMiIGQ9Ik00MjYuNiAwSDY0MHY0ODBINDI2LjZ6TTAgMGgyMTMuM3Y0ODBIMHoiLz4KICA8L2c+Cjwvc3ZnPgo="
+                    alt="">
+                <p>EN</p>
+            </div>
+            <!-- countries modal -->
+            <div class="modal">
+                <div class="modal-body">
+                    <div class="modal-top">
+                        <div class="input-con">
+                            <i class="bi bi-search"></i>
+                            <input type="text" placeholder="Search region">
+                        </div>
+                        <i class="bi bi-x"></i>
+                    </div>
+
+
+                    <div class="country-container">
+                        <div class=" modal-countries">
+
+                            <div class="country-flag">
+                                <img width="20px"
+                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLW5nIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGcgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2Utd2lkdGg9IjFwdCI+CiAgICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDY0MHY0ODBIMHoiLz4KICAgIDxwYXRoIGZpbGw9IiMwMDg3NTMiIGQ9Ik00MjYuNiAwSDY0MHY0ODBINDI2LjZ6TTAgMGgyMTMuM3Y0ODBIMHoiLz4KICA8L2c+Cjwvc3ZnPgo="
+                                    alt="">
+                                <p>Nigeria</p>
+                            </div>
+
+                            <h6>English</h6>
+                        </div>
+                        <div class=" modal-countries">
+
+                            <div class="country-flag">
+                                <img width="20px"
+                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLW5nIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGcgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2Utd2lkdGg9IjFwdCI+CiAgICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDY0MHY0ODBIMHoiLz4KICAgIDxwYXRoIGZpbGw9IiMwMDg3NTMiIGQ9Ik00MjYuNiAwSDY0MHY0ODBINDI2LjZ6TTAgMGgyMTMuM3Y0ODBIMHoiLz4KICA8L2c+Cjwvc3ZnPgo="
+                                    alt="">
+                                <p>Nigeria</p>
+                            </div>
+
+                            <h6>English</h6>
+                        </div>
+                        <div class=" modal-countries">
+
+                            <div class="country-flag">
+                                <img width="20px"
+                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLW5nIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGcgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2Utd2lkdGg9IjFwdCI+CiAgICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDY0MHY0ODBIMHoiLz4KICAgIDxwYXRoIGZpbGw9IiMwMDg3NTMiIGQ9Ik00MjYuNiAwSDY0MHY0ODBINDI2LjZ6TTAgMGgyMTMuM3Y0ODBIMHoiLz4KICA8L2c+Cjwvc3ZnPgo="
+                                    alt="">
+                                <p>Nigeria</p>
+                            </div>
+
+                            <h6>English</h6>
+                        </div>
+                        <div class=" modal-countries">
+
+                            <div class="country-flag">
+                                <img width="20px"
+                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLW5nIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGcgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2Utd2lkdGg9IjFwdCI+CiAgICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDY0MHY0ODBIMHoiLz4KICAgIDxwYXRoIGZpbGw9IiMwMDg3NTMiIGQ9Ik00MjYuNiAwSDY0MHY0ODBINDI2LjZ6TTAgMGgyMTMuM3Y0ODBIMHoiLz4KICA8L2c+Cjwvc3ZnPgo="
+                                    alt="">
+                                <p>Nigeria</p>
+                            </div>
+
+                            <h6>English</h6>
+                        </div>
+                        <div class=" modal-countries">
+
+                            <div class="country-flag">
+                                <img width="20px"
+                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLW5nIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGcgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2Utd2lkdGg9IjFwdCI+CiAgICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDY0MHY0ODBIMHoiLz4KICAgIDxwYXRoIGZpbGw9IiMwMDg3NTMiIGQ9Ik00MjYuNiAwSDY0MHY0ODBINDI2LjZ6TTAgMGgyMTMuM3Y0ODBIMHoiLz4KICA8L2c+Cjwvc3ZnPgo="
+                                    alt="">
+                                <p>Nigeria</p>
+                            </div>
+
+                            <h6>English</h6>
+                        </div>
+                        <div class=" modal-countries">
+
+                            <div class="country-flag">
+                                <img width="20px"
+                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLW5nIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGcgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2Utd2lkdGg9IjFwdCI+CiAgICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDY0MHY0ODBIMHoiLz4KICAgIDxwYXRoIGZpbGw9IiMwMDg3NTMiIGQ9Ik00MjYuNiAwSDY0MHY0ODBINDI2LjZ6TTAgMGgyMTMuM3Y0ODBIMHoiLz4KICA8L2c+Cjwvc3ZnPgo="
+                                    alt="">
+                                <p>Nigeria</p>
+                            </div>
+
+                            <h6>English</h6>
+                        </div>
+                        <div class=" modal-countries">
+
+                            <div class="country-flag">
+                                <img width="20px"
+                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLW5nIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGcgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2Utd2lkdGg9IjFwdCI+CiAgICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDY0MHY0ODBIMHoiLz4KICAgIDxwYXRoIGZpbGw9IiMwMDg3NTMiIGQ9Ik00MjYuNiAwSDY0MHY0ODBINDI2LjZ6TTAgMGgyMTMuM3Y0ODBIMHoiLz4KICA8L2c+Cjwvc3ZnPgo="
+                                    alt="">
+                                <p>Nigeria</p>
+                            </div>
+
+                            <h6>English</h6>
+                        </div>
+                        <div class=" modal-countries">
+
+                            <div class="country-flag">
+                                <img width="20px"
+                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLW5nIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGcgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2Utd2lkdGg9IjFwdCI+CiAgICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDY0MHY0ODBIMHoiLz4KICAgIDxwYXRoIGZpbGw9IiMwMDg3NTMiIGQ9Ik00MjYuNiAwSDY0MHY0ODBINDI2LjZ6TTAgMGgyMTMuM3Y0ODBIMHoiLz4KICA8L2c+Cjwvc3ZnPgo="
+                                    alt="">
+                                <p>Nigeria</p>
+                            </div>
+
+                            <h6>English</h6>
+                        </div>
+                        <div class=" modal-countries">
+
+                            <div class="country-flag">
+                                <img width="20px"
+                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLW5nIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGcgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2Utd2lkdGg9IjFwdCI+CiAgICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDY0MHY0ODBIMHoiLz4KICAgIDxwYXRoIGZpbGw9IiMwMDg3NTMiIGQ9Ik00MjYuNiAwSDY0MHY0ODBINDI2LjZ6TTAgMGgyMTMuM3Y0ODBIMHoiLz4KICA8L2c+Cjwvc3ZnPgo="
+                                    alt="">
+                                <p>Nigeria</p>
+                            </div>
+
+                            <h6>English</h6>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <button class="support">Support</button>
+            <button class="register">Register</button>
+            <i class="bi bi-list"></i>
+
+        </div>
+    </nav>
+
+    <!-- end of navbar -->
+
+    <!-- start of hero section -->
+    <div class="hero container">
+        <div class="hero-text ">
+            <h2>Riding is the new driving</h2>
+            <p>The freedom to go anywhere without paying for parking, fuel, or maintenance. All you need is an app and a
+                <br>destination.
+
+            </p>
+
+            <div class="cta">
+                <button class="get-bolt">Get bolt</button>
+                <button class="earn-bolt">Earn with bold</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="hero-banner"></div>
+
+    <!-- services section -->
+
+    <section class="services ">
+
+        <div class="service-top container">
+
+            <h1 class="service-title">Our Services</h1>
+            <p class="service-desc">Products and features vary by country.
+                Some features listed here may not <br>be available in your app.</p>
+        </div>
+
+        <!-- <div class="service-slider">
+            <div class="slide">
+                <h4>Rides</h4>
+                <p>Request in seconds, ride in minutes</p>
+                <button class="get-bolt">Get started</button>
+            </div>
+            <div class="slide">
+                <h4>Rides</h4>
+                <p>Request in seconds, ride in minutes</p>
+                <button class="get-bolt">Get started</button>
+            </div>
+            <div class="slide">
+                <h4>Rides</h4>
+                <p>Request in seconds, ride in minutes</p>
+                <button class="get-bolt">Get started</button>
+            </div>
+            <div class="slide">
+                <h4>Rides</h4>
+                <p>Request in seconds, ride in minutes</p>
+                <button class="get-bolt">Get started</button>
+            </div>
+            <div class="slide">
+                <h4>Rides</h4>
+                <p>Request in seconds, ride in minutes</p>
+                <button class="get-bolt">Get started</button>
+            </div>
+            <div class="slide">
+                <h4>Rides</h4>
+                <p>Request in seconds, ride in minutes</p>
+                <button class="get-bolt">Get started</button>
+            </div>
+        </div> -->
+    </section>
+
+    <div class="bolt-banner"></div>
+
+
+    <div class="test">
+        3
+    </div>
+
+
+
+</body>
+
+</html>
